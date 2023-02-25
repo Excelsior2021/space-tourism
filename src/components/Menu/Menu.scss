@@ -1,0 +1,49 @@
+@use "../../partials/variables" as *;
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(81.55px);
+  height: 100vh;
+  width: 68%;
+  display: none;
+  z-index: 10;
+
+  &__icon {
+    position: absolute;
+    top: 33px;
+    right: 24px;
+    z-index: 100;
+  }
+
+  &--open {
+    display: block;
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 118px;
+  left: 32px;
+
+  &__item {
+    letter-spacing: 2.7px;
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__index {
+    font-weight: bold;
+    margin-right: 12px;
+  }
+
+  &__page-name {
+    text-transform: uppercase;
+  }
+}

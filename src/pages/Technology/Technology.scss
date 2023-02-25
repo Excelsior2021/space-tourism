@@ -1,0 +1,62 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.technology {
+  @include page-layout-mobile(
+    "./assets/technology/background-technology-mobile.jpg"
+  );
+
+  &__img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 204px;
+    margin-bottom: 26px;
+  }
+
+  &__item {
+    @include bellefair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $grey;
+    margin-left: 16px;
+
+    &--active {
+      color: $dark-blue;
+      background-color: $white;
+    }
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__terminology {
+    letter-spacing: 2.36px;
+    text-transform: uppercase;
+    color: $light-blue;
+    margin-bottom: 9px;
+  }
+
+  &__name {
+    @include bellefair;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    line-height: 2;
+    font-size: 15px;
+    color: $light-blue;
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  &__index {
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2.7px;
+    color: $grey;
+    margin-right: 18px;
+  }
+
+  &__name {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+  }
+}

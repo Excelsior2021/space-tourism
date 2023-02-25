@@ -1,0 +1,45 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.home {
+  @include page-layout-mobile("./assets/home/background-home-mobile.jpg");
+  display: flex;
+  flex-direction: column;
+
+  &__intro {
+    text-align: center;
+    margin: 48px auto 80px auto;
+  }
+
+  &__text-one {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    margin-bottom: 16px;
+  }
+
+  &__text-two {
+    @include bellefair;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__text-three {
+    color: $light-blue;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  &__button {
+    @include bellefair;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 48px;
+  }
+}

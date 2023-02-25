@@ -1,0 +1,101 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.destination {
+  @include page-layout-mobile(
+    "./assets/destination/background-destination-mobile.jpg"
+  );
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  &__page-index {
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    color: $grey;
+    margin-right: 18px;
+  }
+
+  &__heading {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+  }
+
+  &__img {
+    display: block;
+    width: 170px;
+    margin: auto;
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 237px;
+    height: 28px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    list-style: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+    color: $light-blue;
+
+    &--active {
+      border-bottom: 3px solid $white;
+    }
+  }
+
+  &__top {
+    margin-bottom: 32px;
+  }
+
+  &__name {
+    @include bellefair;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: 400;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 15px;
+    color: $light-blue;
+    line-height: 25px;
+    border-bottom: 1px solid $grey;
+    padding-bottom: 32px;
+  }
+
+  &__info {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $light-blue;
+    margin-bottom: 12px;
+    letter-spacing: 2.36px;
+  }
+
+  &__value {
+    @include bellefair;
+    font-size: 28px;
+  }
+}

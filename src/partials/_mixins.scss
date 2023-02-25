@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Bellefair";
+  src: url("../assets/fonts/Bellefair-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf");
+}
+
+@mixin bellefair {
+  font-family: "Bellefair";
+}
+
+@mixin barlow {
+  font-family: "Barlow Condensed";
+}
+
+@mixin page-layout-mobile($url) {
+  min-height: 100vh;
+  padding: 0 24px;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 58px;
+}

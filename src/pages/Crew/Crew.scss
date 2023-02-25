@@ -1,0 +1,63 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.crew {
+  @include page-layout-mobile("./assets/crew/background-crew-mobile.jpg");
+
+  &__img-container {
+    border-bottom: 1px solid $grey;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #979797;
+    border-radius: 50%;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: $white;
+    }
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__role {
+    @include bellefair;
+    text-transform: uppercase;
+    color: #929398;
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    @include bellefair;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__bio {
+    color: $light-blue;
+    font-size: 15px;
+    line-height: 2;
+  }
+}
