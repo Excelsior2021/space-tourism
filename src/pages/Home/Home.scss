@@ -6,16 +6,30 @@
   display: flex;
   flex-direction: column;
 
+  @include media-tablet {
+    @include page-layout-tablet("./assets/home/background-home-tablet.jpg");
+  }
+
   &__intro {
     text-align: center;
     margin: 48px auto 80px auto;
+
+    @include media-tablet {
+      margin: 106px auto 156px auto;
+    }
   }
 
   &__text-one {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2.7px;
+    color: $light-blue;
     margin-bottom: 16px;
+
+    @include media-tablet {
+      font-size: 20px;
+      letter-spacing: 3.38px;
+    }
   }
 
   &__text-two {
@@ -23,12 +37,21 @@
     font-size: 80px;
     text-transform: uppercase;
     margin-bottom: 16px;
+
+    @include media-tablet {
+      font-size: 150px;
+    }
   }
 
   &__text-three {
     color: $light-blue;
     font-size: 15px;
     line-height: 2;
+
+    @include media-tablet {
+      font-size: 16px;
+      width: 444px;
+    }
   }
 
   &__button {
@@ -41,5 +64,10 @@
     border-radius: 50%;
     margin: auto;
     margin-bottom: 48px;
+
+    @include media-tablet {
+      width: 242px;
+      height: 242px;
+    }
   }
 }

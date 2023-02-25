@@ -6,6 +6,11 @@
   justify-content: center;
   margin-bottom: 32px;
 
+  @include media-tablet {
+    margin-top: 40px;
+    justify-content: start;
+  }
+
   &__index {
     display: inline;
     font-size: 16px;
@@ -13,6 +18,11 @@
     letter-spacing: 2.7px;
     color: $grey;
     margin-right: 18px;
+
+    @include media-tablet {
+      font-size: 20px;
+      letter-spacing: 2.7px;
+    }
   }
 
   &__name {
@@ -20,6 +30,11 @@
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 2.7px;
+    letter-spacing: 3.8px;
+
+    @include media-tablet {
+      font-size: 20px;
+      letter-spacing: 3.8px;
+    }
   }
 }

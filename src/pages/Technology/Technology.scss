@@ -6,10 +6,20 @@
     "./assets/technology/background-technology-mobile.jpg"
   );
 
+  @include media-tablet {
+    @include page-layout-tablet(
+      "./assets/technology/background-technology-tablet.jpg"
+    );
+  }
+
   &__img {
     position: absolute;
     left: 0;
     width: 100%;
+
+    @include media-tablet {
+      top: 220px;
+    }
   }
 
   &__nav {
@@ -17,6 +27,11 @@
     justify-content: center;
     margin-top: 204px;
     margin-bottom: 26px;
+
+    @include media-tablet {
+      margin-top: 426px;
+      margin-bottom: 44px;
+    }
   }
 
   &__item {
@@ -29,6 +44,11 @@
     border-radius: 50%;
     border: 1px solid $grey;
     margin-left: 16px;
+
+    @include media-tablet {
+      width: 60px;
+      height: 60px;
+    }
 
     &--active {
       color: $dark-blue;
@@ -45,6 +65,10 @@
     text-transform: uppercase;
     color: $light-blue;
     margin-bottom: 9px;
+
+    @include media-tablet {
+      margin-bottom: 16px;
+    }
   }
 
   &__name {
@@ -52,11 +76,21 @@
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 16px;
+
+    @include media-tablet {
+      font-size: 40px;
+    }
   }
 
   &__description {
     line-height: 2;
     font-size: 15px;
     color: $light-blue;
+
+    @include media-tablet {
+      font-size: 16px;
+      width: 458px;
+      margin: auto;
+    }
   }
 }

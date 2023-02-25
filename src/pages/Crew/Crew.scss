@@ -4,15 +4,42 @@
 .crew {
   @include page-layout-mobile("./assets/crew/background-crew-mobile.jpg");
 
+  @include media-tablet {
+    @include page-layout-tablet("./assets/crew/background-crew-tablet.jpg");
+    padding-bottom: 0;
+  }
+
   &__img-container {
     border-bottom: 1px solid $grey;
     margin-bottom: 32px;
+
+    @include media-tablet {
+      top: 492px;
+      bottom: 0;
+      margin: auto;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__main {
+    @include media-tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__img {
     display: block;
     width: 50%;
     margin: auto;
+  }
+
+  &__nav-info-container {
+    @include media-tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__nav {
@@ -39,6 +66,11 @@
 
   &__info {
     text-align: center;
+
+    @include media-tablet {
+      width: 458px;
+      margin: auto;
+    }
   }
 
   &__role {
@@ -46,6 +78,10 @@
     text-transform: uppercase;
     color: #929398;
     margin-bottom: 8px;
+
+    @include media-tablet {
+      font-size: 24px;
+    }
   }
 
   &__name {
@@ -53,11 +89,20 @@
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 24px;
+
+    @include media-tablet {
+      font-size: 40px;
+    }
   }
 
   &__bio {
     color: $light-blue;
     font-size: 15px;
     line-height: 2;
+
+    @include media-tablet {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
   }
 }

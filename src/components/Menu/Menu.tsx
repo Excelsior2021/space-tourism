@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import menuImg from "../../assets/shared/icon-hamburger.svg"
 import menuClose from "../../assets/shared/icon-close.svg"
 import "./Menu.scss"
@@ -30,15 +30,19 @@ const Menu = () => {
           setMenu(!menu)
         }}
       />
-      <div className={menu ? "menu menu--open" : "menu "}>
+      <div className={menu ? "menu menu--open" : "menu"}>
         <nav className="nav">
           <ul className="nav__list">
             {pages.map(({ name, url }, i) => (
-              <li key={name} className="nav__item">
-                <Link to={url} className="nav__link">
+              <li key={name} className={"nav__item"}>
+                <NavLink
+                  to={url}
+                  className={({ isActive }) =>
+                    isActive ? "nav__link nav__link--active" : "nav__link"
+                  }>
                   <span className="nav__index">{`0${i}`}</span>
                   <span className="nav__page-name">{name}</span>
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

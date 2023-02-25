@@ -6,26 +6,10 @@
     "./assets/destination/background-destination-mobile.jpg"
   );
 
-  &__header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-  }
-
-  &__page-index {
-    display: inline;
-    font-size: 16px;
-    font-weight: bold;
-    color: $grey;
-    margin-right: 18px;
-  }
-
-  &__heading {
-    display: inline;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 2.7px;
+  @include media-tablet {
+    @include page-layout-tablet(
+      "./assets/destination/background-destination-tablet.jpg"
+    );
   }
 
   &__img {
@@ -33,15 +17,23 @@
     width: 170px;
     margin: auto;
     margin-bottom: 26px;
+
+    @include media-tablet {
+      width: 300px;
+      margin-bottom: 53px;
+    }
   }
 
   &__list {
     display: flex;
-    justify-content: space-between;
-    width: 237px;
+    justify-content: center;
     height: 28px;
     margin: auto;
     margin-bottom: 20px;
+
+    @include media-tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__item {
@@ -50,14 +42,20 @@
     text-transform: uppercase;
     letter-spacing: 2.36px;
     color: $light-blue;
+    margin-right: 26px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include media-tablet {
+      font-size: 16px;
+      margin-right: 36px;
+    }
 
     &--active {
       border-bottom: 3px solid $white;
     }
-  }
-
-  &__top {
-    margin-bottom: 32px;
   }
 
   &__name {
@@ -66,6 +64,10 @@
     text-transform: uppercase;
     font-size: 56px;
     font-weight: 400;
+
+    @include media-tablet {
+      margin-bottom: 8px;
+    }
   }
 
   &__description {
@@ -73,8 +75,25 @@
     font-size: 15px;
     color: $light-blue;
     line-height: 25px;
-    border-bottom: 1px solid $grey;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
+
+    @include media-tablet {
+      width: 573px;
+      margin: auto;
+      padding-bottom: 49px;
+    }
+  }
+
+  &__info-container {
+    border-top: 1px solid $grey;
+    padding-top: 32px;
+
+    @include media-tablet {
+      display: flex;
+      justify-content: space-around;
+      width: 573px;
+      margin: auto;
+    }
   }
 
   &__info {

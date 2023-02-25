@@ -18,9 +18,28 @@
 
 @mixin page-layout-mobile($url) {
   min-height: 100vh;
-  padding: 0 24px;
   background-image: url($url);
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 24px;
   padding-bottom: 58px;
+}
+
+@mixin page-layout-tablet($url) {
+  min-height: 100vh;
+  background-image: url($url);
+  padding: 0 39px;
+  padding-bottom: 90px;
+}
+
+@mixin media-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
 }

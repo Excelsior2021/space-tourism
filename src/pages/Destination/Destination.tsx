@@ -34,19 +34,19 @@ const Destination = ({ destinations }) => {
         </ul>
       </nav>
 
-      <div className="destination__top">
-        <h1 className="destination__name">{active.name}</h1>
-        <p className="destination__description">{active.description}</p>
-      </div>
+      <h1 className="destination__name">{active.name}</h1>
+      <p className="destination__description">{active.description}</p>
 
-      <div className="destination__info">
-        <p className="destination__label">avg. distance</p>
-        <p className="destination__value">{active.distance}</p>
-      </div>
+      <div className="destination__info-container">
+        <div className="destination__info">
+          <p className="destination__label">avg. distance</p>
+          <p className="destination__value">{active.distance}</p>
+        </div>
 
-      <div className="destination__info">
-        <p className="destination__label">est. travel time</p>
-        <p className="destination__value">{active.travel}</p>
+        <div className="destination__info">
+          <p className="destination__label">est. travel time</p>
+          <p className="destination__value">{active.travel}</p>
+        </div>
       </div>
     </div>
   )

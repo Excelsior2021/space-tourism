@@ -6,9 +6,9 @@ import "./Header.scss"
 const Header = () => {
   return (
     <>
-      <Menu />
       <header className="header">
         <img src={logo} alt="logo" className="header__logo" />
+        <Menu />
       </header>
     </>
   )
