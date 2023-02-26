@@ -2,17 +2,17 @@
 @use "../../partials/mixins" as *;
 
 .technology {
-  @include page-layout-mobile(".//technology/background-technology-mobile.jpg");
+  @include page-layout-mobile("./technology/background-technology-mobile.jpg");
 
   @include media-tablet {
     @include page-layout-tablet(
-      ".//technology/background-technology-tablet.jpg"
+      "./technology/background-technology-tablet.jpg"
     );
   }
 
   @include media-desktop {
     @include page-layout-desktop(
-      ".//technology/background-technology-desktop.jpg"
+      "./technology/background-technology-desktop.jpg"
     );
   }
 
