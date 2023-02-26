@@ -2,5 +2,27 @@
 @use "../../partials/mixins" as *;
 
 .header {
-  padding: 24px 0;
+  @include max-width;
+  position: relative;
+  margin: auto;
+  padding: 24px;
+
+  @include media-tablet {
+    padding: 24px 39px;
+  }
+
+  @include media-desktop {
+    padding: 64px 56px;
+  }
+
+  &__line {
+    @include media-desktop {
+      position: absolute;
+      top: 87.5px;
+      left: 167px;
+      background-color: #76787e;
+      width: 473px;
+      height: 1px;
+    }
+  }
 }

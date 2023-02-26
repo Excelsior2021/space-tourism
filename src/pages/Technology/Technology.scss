@@ -12,25 +12,76 @@
     );
   }
 
+  @include media-desktop {
+    @include page-layout-desktop(
+      "./assets/technology/background-technology-desktop.jpg"
+    );
+  }
+
+  &__main {
+    @include max-width;
+  }
+
+  &__title-container {
+    padding: 0 24px;
+
+    @include media-tablet {
+      padding: 0 39px;
+    }
+  }
+
+  &__content {
+    @include media-desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
   &__img {
-    position: absolute;
-    left: 0;
+    display: block;
     width: 100%;
 
     @include media-tablet {
-      top: 220px;
+      margin-top: 60px;
+    }
+
+    @include media-desktop {
+      width: 515px;
+      margin-top: 0;
+    }
+  }
+
+  &__below-image {
+    margin-top: 34px;
+    padding: 0 24px;
+
+    @include media-tablet {
+      margin-top: 56px;
+      padding: 0 39px;
+    }
+
+    @include media-desktop {
+      display: flex;
+      margin-top: 0;
     }
   }
 
   &__nav {
     display: flex;
     justify-content: center;
-    margin-top: 204px;
     margin-bottom: 26px;
 
     @include media-tablet {
-      margin-top: 426px;
       margin-bottom: 44px;
+    }
+
+    @include media-desktop {
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0;
+      margin-right: 80px;
     }
   }
 
@@ -44,20 +95,45 @@
     border-radius: 50%;
     border: 1px solid $grey;
     margin-left: 16px;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $white;
+    }
 
     @include media-tablet {
+      font-size: 24px;
       width: 60px;
       height: 60px;
+    }
+
+    @include media-desktop {
+      font-size: 32px;
+      width: 80px;
+      height: 80px;
+      margin: 0;
+      margin-bottom: 32px;
     }
 
     &--active {
       color: $dark-blue;
       background-color: $white;
+      border: 1px solid white;
+    }
+
+    &:last-child {
+      @include media-desktop {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__info {
     text-align: center;
+
+    @include media-desktop {
+      text-align: start;
+    }
   }
 
   &__terminology {
@@ -80,6 +156,10 @@
     @include media-tablet {
       font-size: 40px;
     }
+
+    @include media-desktop {
+      font-size: 56px;
+    }
   }
 
   &__description {
@@ -91,6 +171,10 @@
       font-size: 16px;
       width: 458px;
       margin: auto;
+    }
+
+    @include media-desktop {
+      font-size: 18px;
     }
   }
 }

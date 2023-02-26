@@ -3,11 +3,32 @@
 
 .home {
   @include page-layout-mobile("./assets/home/background-home-mobile.jpg");
-  display: flex;
-  flex-direction: column;
 
   @include media-tablet {
     @include page-layout-tablet("./assets/home/background-home-tablet.jpg");
+  }
+
+  @include media-desktop {
+    @include page-layout-tablet("./assets/home/background-home-desktop.jpg");
+  }
+
+  &__main {
+    @include max-width;
+    padding: 0 24px;
+
+    @include media-tablet {
+      padding: 0 39px;
+    }
+
+    @include media-desktop {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 450px;
+      margin: auto;
+      margin-top: 5%;
+      padding: 0 64px;
+    }
   }
 
   &__intro {
@@ -16,6 +37,11 @@
 
     @include media-tablet {
       margin: 106px auto 156px auto;
+    }
+
+    @include media-desktop {
+      text-align: left;
+      margin: 0;
     }
   }
 
@@ -29,6 +55,12 @@
     @include media-tablet {
       font-size: 20px;
       letter-spacing: 3.38px;
+    }
+
+    @include media-desktop {
+      font-size: 28px;
+      letter-spacing: 4.72px;
+      margin-bottom: 24px;
     }
   }
 
@@ -51,11 +83,30 @@
     @include media-tablet {
       font-size: 16px;
       width: 444px;
+      margin: auto;
+    }
+
+    @include media-desktop {
+      font-size: 18px;
+      line-height: 2.1;
+    }
+  }
+
+  &__button-hover {
+    @include media-desktop {
+      position: absolute;
+      right: 64px;
+      display: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
     }
   }
 
   &__button {
     @include bellefair;
+    display: block;
     font-size: 20px;
     text-transform: uppercase;
     width: 150px;
@@ -63,11 +114,36 @@
     border: none;
     border-radius: 50%;
     margin: auto;
-    margin-bottom: 48px;
+    z-index: 10;
+    cursor: pointer;
 
     @include media-tablet {
+      font-size: 32px;
       width: 242px;
       height: 242px;
     }
+
+    @include media-desktop {
+      position: absolute;
+      top: 91px;
+      right: 152px;
+      width: 274px;
+      height: 274px;
+    }
+
+    &:hover ~ .home__button-hover {
+      display: block;
+      animation: button-hover 0.1s linear;
+    }
+  }
+}
+
+@keyframes button-hover {
+  0% {
+    transform: scale(0.61);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

@@ -9,45 +9,52 @@ const Destination = ({ destinations }) => {
   return (
     <div className="destination">
       <Header />
-      <Title index="01" name="pick your destination" />
 
-      <img
-        className="destination__img"
-        src={active.images.png}
-        alt="destination"
-      />
+      <main className="destination__main">
+        <Title index="01" name="pick your destination" />
 
-      <nav className="destination__nav">
-        <ul className="destination__list">
-          {destinations.map(destination => (
-            <li
-              key={destination.name}
-              className={
-                active.name === destination.name
-                  ? "destination__item destination__item--active"
-                  : "destination__item"
-              }
-              onClick={() => setActive(destination)}>
-              {destination.name}
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <div className="destination__content">
+          <img
+            className="destination__img"
+            src={active.images.png}
+            alt="destination"
+          />
 
-      <h1 className="destination__name">{active.name}</h1>
-      <p className="destination__description">{active.description}</p>
+          <div className="destination__aside">
+            <nav className="destination__nav">
+              <ul className="destination__list">
+                {destinations.map(destination => (
+                  <li
+                    key={destination.name}
+                    className={
+                      active.name === destination.name
+                        ? "destination__item destination__item--active"
+                        : "destination__item"
+                    }
+                    onClick={() => setActive(destination)}>
+                    {destination.name}
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-      <div className="destination__info-container">
-        <div className="destination__info">
-          <p className="destination__label">avg. distance</p>
-          <p className="destination__value">{active.distance}</p>
+            <h1 className="destination__name">{active.name}</h1>
+            <p className="destination__description">{active.description}</p>
+
+            <div className="destination__info-container">
+              <div className="destination__info">
+                <p className="destination__label">avg. distance</p>
+                <p className="destination__value">{active.distance}</p>
+              </div>
+
+              <div className="destination__info">
+                <p className="destination__label">est. travel time</p>
+                <p className="destination__value">{active.travel}</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className="destination__info">
-          <p className="destination__label">est. travel time</p>
-          <p className="destination__value">{active.travel}</p>
-        </div>
-      </div>
+      </main>
     </div>
   )
 }

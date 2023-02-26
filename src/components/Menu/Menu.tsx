@@ -33,6 +33,7 @@ const Menu = () => {
       <div className={menu ? "menu menu--open" : "menu"}>
         <nav className="nav">
           <ul className="nav__list">
+            <div className="nav__list-line"></div>
             {pages.map(({ name, url }, i) => (
               <li key={name} className={"nav__item"}>
                 <NavLink

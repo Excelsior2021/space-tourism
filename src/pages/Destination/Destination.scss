@@ -12,6 +12,33 @@
     );
   }
 
+  @include media-desktop {
+    @include page-layout-desktop(
+      "./assets/destination/background-destination-desktop.jpg"
+    );
+  }
+
+  &__main {
+    @include max-width;
+    padding: 0 24px;
+
+    @include media-tablet {
+      padding: 0 39px;
+    }
+
+    @include media-desktop {
+      padding: 0 64px;
+    }
+  }
+
+  &__content {
+    @include media-desktop {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 64px;
+    }
+  }
+
   &__img {
     display: block;
     width: 170px;
@@ -21,6 +48,12 @@
     @include media-tablet {
       width: 300px;
       margin-bottom: 53px;
+    }
+
+    @include media-desktop {
+      width: 445px;
+      margin: 0;
+      margin-right: 64px;
     }
   }
 
@@ -34,6 +67,10 @@
     @include media-tablet {
       margin-bottom: 32px;
     }
+
+    @include media-desktop {
+      justify-content: start;
+    }
   }
 
   &__item {
@@ -43,6 +80,7 @@
     letter-spacing: 2.36px;
     color: $light-blue;
     margin-right: 26px;
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0;
@@ -51,10 +89,22 @@
     @include media-tablet {
       font-size: 16px;
       margin-right: 36px;
+
+      &:hover {
+        @include media-tablet {
+          border-bottom: 3px solid #84858a;
+        }
+      }
     }
 
     &--active {
       border-bottom: 3px solid $white;
+
+      &:hover {
+        @include media-tablet {
+          border-bottom: 3px solid $white;
+        }
+      }
     }
   }
 
@@ -68,6 +118,11 @@
     @include media-tablet {
       margin-bottom: 8px;
     }
+
+    @include media-desktop {
+      text-align: start;
+      font-size: 100px;
+    }
   }
 
   &__description {
@@ -78,9 +133,15 @@
     margin-bottom: 32px;
 
     @include media-tablet {
+      font-size: 16px;
       width: 573px;
       margin: auto;
       padding-bottom: 49px;
+    }
+
+    @include media-desktop {
+      text-align: start;
+      font-size: 18px;
     }
   }
 
@@ -94,6 +155,10 @@
       width: 573px;
       margin: auto;
     }
+
+    @include media-desktop {
+      justify-content: start;
+    }
   }
 
   &__info {
@@ -101,8 +166,17 @@
     text-transform: uppercase;
     margin-bottom: 32px;
 
+    @include media-desktop {
+      text-align: start;
+      margin-right: 79px;
+    }
+
     &:last-child {
       margin-bottom: 0;
+
+      @include media-desktop {
+        margin-right: 0;
+      }
     }
   }
 

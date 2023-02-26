@@ -21,15 +21,17 @@
   background-image: url($url);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 24px;
   padding-bottom: 58px;
 }
 
 @mixin page-layout-tablet($url) {
-  min-height: 100vh;
   background-image: url($url);
-  padding: 0 39px;
   padding-bottom: 90px;
+}
+
+@mixin page-layout-desktop($url) {
+  background-image: url($url);
+  padding-bottom: 112px;
 }
 
 @mixin media-tablet {
@@ -39,7 +41,12 @@
 }
 
 @mixin media-desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: 1240px) {
     @content;
   }
+}
+
+@mixin max-width {
+  max-width: 1440px;
+  margin: auto;
 }

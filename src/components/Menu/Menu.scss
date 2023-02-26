@@ -17,11 +17,17 @@
     backdrop-filter: none;
   }
 
+  @include media-desktop {
+    top: 40px;
+    width: auto;
+  }
+
   &__icon {
     position: absolute;
     top: 33px;
     right: 24px;
     z-index: 100;
+    cursor: pointer;
 
     @include media-tablet {
       display: none;
@@ -48,9 +54,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 47px;
-      background-color: #1f222c;
       height: 98px;
+      padding: 0 47px;
+      background-color: #232730;
+    }
+
+    @include media-desktop {
+      justify-content: start;
+      background-color: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px);
+      padding-left: 123px;
+      padding-right: 165px;
+      max-width: 830px;
+    }
+  }
+
+  &__list-line {
+    @include media-desktop {
+      position: absolute;
+      left: 0;
+      top: 47.5px;
+      width: 30px;
+      height: 1px;
+      background-color: #76787e;
     }
   }
 
@@ -62,6 +88,14 @@
     @include media-tablet {
       margin-bottom: 0;
       height: 100%;
+    }
+
+    @include media-desktop {
+      margin-right: 48px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -75,9 +109,21 @@
       align-items: center;
     }
 
+    &:hover {
+      @include media-tablet {
+        border-bottom: 2px solid #84858a;
+      }
+    }
+
     &--active {
       @include media-tablet {
         border-bottom: 2px solid $white;
+      }
+
+      &:hover {
+        @include media-tablet {
+          border-bottom: 2px solid $white;
+        }
       }
     }
   }
@@ -88,6 +134,10 @@
 
     @include media-tablet {
       display: none;
+    }
+
+    @include media-desktop {
+      display: block;
     }
   }
 
