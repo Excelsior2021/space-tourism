@@ -3,18 +3,18 @@
 
 .destination {
   @include page-layout-mobile(
-    "./assets/destination/background-destination-mobile.jpg"
+    ".//destination/background-destination-mobile.jpg"
   );
 
   @include media-tablet {
     @include page-layout-tablet(
-      "./assets/destination/background-destination-tablet.jpg"
+      ".//destination/background-destination-tablet.jpg"
     );
   }
 
   @include media-desktop {
     @include page-layout-desktop(
-      "./assets/destination/background-destination-desktop.jpg"
+      ".//destination/background-destination-desktop.jpg"
     );
   }
 

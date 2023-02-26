@@ -2,15 +2,15 @@
 @use "../../partials/mixins" as *;
 
 .crew {
-  @include page-layout-mobile("./assets/crew/background-crew-mobile.jpg");
+  @include page-layout-mobile(".//crew/background-crew-mobile.jpg");
 
   @include media-tablet {
-    @include page-layout-tablet("./assets/crew/background-crew-tablet.jpg");
+    @include page-layout-tablet(".//crew/background-crew-tablet.jpg");
     padding-bottom: 0;
   }
 
   @include media-desktop {
-    @include page-layout-desktop("./assets/crew/background-crew-desktop.jpg");
+    @include page-layout-desktop(".//crew/background-crew-desktop.jpg");
     padding-bottom: 0;
   }
 
