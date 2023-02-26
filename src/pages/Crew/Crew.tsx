@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useState } from "react"
 import Header from "../../components/Header/Header"
 import Title from "../../components/Title/Title"

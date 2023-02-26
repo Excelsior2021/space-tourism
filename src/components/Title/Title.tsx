@@ -1,3 +1,4 @@
+//@ts-nocheck
 import "./Title.scss"
 
 const Title = ({ index, name }) => {
