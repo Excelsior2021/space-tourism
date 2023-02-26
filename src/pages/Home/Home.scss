@@ -2,16 +2,14 @@
 @use "../../partials/mixins" as *;
 
 .home {
-  @include page-layout-mobile("../../assets/home/background-home-mobile.jpg");
+  @include page-layout-mobile("./home/background-home-mobile.jpg");
 
   @include media-tablet {
-    @include page-layout-tablet("../../assets/home/background-home-tablet.jpg");
+    @include page-layout-tablet("./home/background-home-tablet.jpg");
   }
 
   @include media-desktop {
-    @include page-layout-tablet(
-      "../../assets/home/background-home-desktop.jpg"
-    );
+    @include page-layout-tablet("./home/background-home-desktop.jpg");
   }
 
   &__main {
