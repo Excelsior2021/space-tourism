@@ -1,11 +1,16 @@
-//@ts-nocheck
 import { useState } from "react"
 import Header from "../../components/Header/Header"
 import Title from "../../components/Title/Title"
+import { crewObjType } from "../../types/types"
 import "./Crew.scss"
 
-const Crew = ({ crew }) => {
+type crewType = {
+  crew: crewObjType[]
+}
+
+const Crew = ({ crew }: crewType) => {
   const [memberState, setMemeberState] = useState(crew[0])
+
   return (
     <div className="crew">
       <Header />

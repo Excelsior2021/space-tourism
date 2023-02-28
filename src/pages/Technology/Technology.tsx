@@ -1,11 +1,16 @@
-//@ts-nocheck
 import { useState } from "react"
 import Header from "../../components/Header/Header"
 import Title from "../../components/Title/Title"
+import { technologyObjType } from "../../types/types"
 import "./Technology.scss"
 
-const Technology = ({ technology }) => {
+type technologyType = {
+  technology: technologyObjType[]
+}
+
+const Technology = ({ technology }: technologyType) => {
   const [technologyState, setTechnologyState] = useState(technology[0])
+
   return (
     <div className="technology">
       <Header />

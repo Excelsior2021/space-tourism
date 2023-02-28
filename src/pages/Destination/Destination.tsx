@@ -1,10 +1,14 @@
-//@ts-nocheck
 import { useState } from "react"
 import Header from "../../components/Header/Header"
 import Title from "../../components/Title/Title"
+import { destinationObjType } from "../../types/types"
 import "./Destination.scss"
 
-const Destination = ({ destinations }) => {
+type destinationType = {
+  destinations: destinationObjType[]
+}
+
+const Destination = ({ destinations }: destinationType) => {
   const [active, setActive] = useState(destinations[0])
 
   return (
